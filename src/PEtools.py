@@ -87,3 +87,14 @@ def is_palindrome(n):
     if a == b:
         return True
     return False
+
+
+def bico(num):
+    """ Returns list of binomial coefficients in
+        the terms of the polynomial expansion of
+        the binomial power (x + 1) ** n"""
+    
+    from math import factorial
+
+    return [factorial(num) // (factorial(k) * factorial(num - k)) for k in range(num + 1)]
+      
